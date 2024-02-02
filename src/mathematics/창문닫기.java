@@ -10,11 +10,6 @@ public class 창문닫기 {
 
         int N = Integer.parseInt(br.readLine());
 
-        int answer = 0;
-        for (int i = 0; i <= Math.sqrt(N); i++) {
-            answer++;
-        }
-
-        System.out.println(answer);
+        System.out.println((int) Math.sqrt(N));
     }
 }
