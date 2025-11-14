@@ -1,0 +1,38 @@
+package leetcode;
+
+public class NumberOfStepsToReduceANumberToZero {
+    public static void main(String[] args) {
+        numberOfSteps(12);
+    }
+
+    public static int numberOfSteps(int num) {
+        int count = 0;
+
+        while (num > 0) {
+            if (num % 2 == 0) {
+                num /= 2;
+            } else {
+                num -= 1;
+            }
+            count++;
+        }
+
+        return count;
+    }
+
+    public static int numberOfSteps2(int num) {
+        int count = 0;
+
+        while (num > 0) {
+            if ((num & 1) == 0) {
+                num = num >> 1;
+//                num >>= 1;
+            } else {
+                num -= 1;
+            }
+            count++;
+        }
+
+        return count;
+    }
+}
