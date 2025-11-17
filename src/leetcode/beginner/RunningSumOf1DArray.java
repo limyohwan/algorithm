@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.beginner;
 
 public class RunningSumOf1DArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.beginner;
 
 public class NumberOfStepsToReduceANumberToZero {
     public static void main(String[] args) {
