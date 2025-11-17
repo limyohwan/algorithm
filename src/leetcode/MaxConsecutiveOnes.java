@@ -22,4 +22,48 @@ public class MaxConsecutiveOnes {
 
         return max;
     }
+
+    public int findMaxConsecutiveOnes2(int[] nums) {
+        int count = 0;
+        int max = 0;
+
+        for (int n : nums) {
+            if (n == 1) {
+                count++;
+                if (max < count) {
+                    max = count;
+                }
+            } else {
+                count = 0;
+            }
+        }
+
+        return max;
+    }
+
+    public int findMaxConsecutiveOnes3(int[] nums) {
+        int maxConsecutive = 0;
+        int currentCount = 0;
+
+        for (int num : nums) {
+            if (num == 1) {
+                currentCount++;
+                maxConsecutive = Math.max(maxConsecutive, currentCount);
+            } else {
+                currentCount = 0;
+            }
+        }
+
+        return maxConsecutive;
+    }
+
+    public int findMaxConsecutiveOnes4(int[] nums) {
+        int count = 0, max = 0;
+
+        for (int n : nums) {
+            max = Math.max(max, count = n == 0 ? 0 : count + 1);
+        }
+
+        return max;
+    }
 }
